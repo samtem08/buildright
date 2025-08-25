@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BuildRight Construction</title>
+    <meta name="description" content="Professional building and construction services: residential, commercial, and industrial projects. Get a free quote today." />
+    <meta name="theme-color" content="#0d2b45">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ====== Header / Nav ====== -->
+  <header>
+    <div class="container nav">
+      <div class="logo" aria-label="BuildRight Construction">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="28" width="15" height="17" rx="3" fill="#ffd271"/>
+          <rect x="19" y="20" width="12" height="25" rx="3" fill="#f29f05"/>
+          <rect x="33" y="10" width="12" height="35" rx="3" fill="#ffcc6a"/>
+        </svg>
+        <span>BuildRight</span>
+      </div>
+      <nav aria-label="Main">
+        <ul id="mainmenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="project.html">Projects</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mainmenu" id="menubtn">☰</button>
+    </div>
+  </header>
+
+
+  <!-- ====== Services ====== -->
+  <section id="services">
+    <div class="container">
+      <div class="sect-head">
+        <div>
+          <h2>Our Projects</h2>
+          <p class="muted">End‑to‑end solutions from planning to handover.</p>
+        </div>
+      </div>
+      <div class="grid services">
+        <div class="card service">
+          <div class="icon" aria-hidden="true">🏗️</div>
+          <h3>Design & Build</h3>
+          <p>Integrated architectural and structural design with construction execution for faster delivery.</p>
+        </div>
+        <div class="card service">
+          <div class="icon">🏢</div>
+          <h3>Commercial Construction</h3>
+          <p>Offices, malls, schools, hospitals—built to code with energy‑efficient systems.</p>
+        </div>
+        <div class="card service">
+          <div class="icon">🏠</div>
+          <h3>Residential Projects</h3>
+          <p>Duplexes, apartments, estates, and luxury interiors with premium finishes.</p>
+        </div>
+        <div class="card service">
+          <div class="icon">🧱</div>
+          <h3>Renovations & Fit‑Out</h3>
+          <p>Remodelling, space planning, tiling, POP, painting, and MEP upgrades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Projects / Portfolio ====== -->
+  <section id="projects">
+    <div class="container">
+      <div class="sect-head">
+        <div>
+          <h2>Featured Projects</h2>
+          <p class="muted">A glimpse of what we have built.</p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button class="active" data-filter="all" role="tab">All</button>
+          <button data-filter="residential" role="tab">Residential</button>
+          <button data-filter="commercial" role="tab">Commercial</button>
+          <button data-filter="industrial" role="tab">Industrial</button>
+        </div>
+      </div>
+      <div class="grid projects" id="projectGrid">
+        <!-- Each card carries data-category for filtering -->
+        <article class="project-card" data-category="residential">
+          <span class="tag">Residential</span>
+          <img src="assets/modern-duplex.jpg" alt="Modern duplex exterior"/>
+          <div class="info"><strong>Ikoyi Duplex</strong><div class="muted">Lagos, 2024</div></div>
+        </article>
+        <article class="project-card" data-category="commercial">
+          <span class="tag">Commercial</span>
+          <img src="assets/glass-facade.jpg" alt="Office building glass facade"/>
+          <div class="info"><strong>Harbor Office Park</strong><div class="muted">Abuja, 2023</div></div>
+        </article>
+        <article class="project-card" data-category="industrial">
+          <span class="tag">Industrial</span>
+          <img src="assets/factory.jpg" alt="Industrial warehouse"/>
+          <div class="info"><strong>Distribution Hub</strong><div class="muted">Port Harcourt, 2022</div></div>
+        </article>
+        <article class="project-card" data-category="residential">
+          <span class="tag">Residential</span>
+          <img src="assets/living-room.jpg" alt="Apartment interior living room"/>
+          <div class="info"><strong>Bayview Apartments</strong><div class="muted">Lagos, 2025</div></div>
+        </article>
+        <article class="project-card" data-category="commercial">
+          <span class="tag">Commercial</span>
+          <img src="assets/modern-escalator-shopping-mall.jpg" alt="Shopping mall atrium"/>
+          <div class="info"><strong>Silver Mall</strong><div class="muted">Ibadan, 2024</div></div>
+        </article>
+        <article class="project-card" data-category="industrial">
+          <span class="tag">Industrial</span>
+          <img src="assets/agriculture-food-silos.jpg" alt="Factory interior"/>
+          <div class="info"><strong>Agro Processing Plant</strong><div class="muted">Kano, 2023</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ====== Contact ====== -->
+  <section id="contact">
+    <div class="container">
+      <div class="sect-head">
+        <div>
+          <h2>Request a Quote</h2>
+          <p class="muted">Tell us about your project and we’ll get back within 24 hours.</p>
+        </div>
+      </div>
+      <div class="contact-box">
+        <div class="contact-card">
+          <form id="quoteForm" action="#" method="post" onsubmit="handleSubmit(event)">
+            <div class="grid" style="grid-template-columns:1fr 1fr">
+              <div class="fld"><label for="name">Full Name</label><input required id="name" name="name" placeholder="First name             Last name"/></div>
+              <div class="fld"><label for="phone">Phone</label><input required id="phone" name="phone" placeholder="0803 000 0000"/></div>
+              <div class="fld"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com"/></div>
+              <div class="fld"><label for="service">Service</label>
+                <select id="service" name="service"> 
+                  <option>Residential Build</option>
+                  <option>Commercial Project</option>
+                  <option>Renovation / Fit‑Out</option>
+                  <option>Design & Build</option>
+                </select>
+              </div>
+            </div>
+            <div class="fld"><label for="message">Project Details</label><textarea id="message" name="message" placeholder="Location, timeline, budget range..."></textarea></div>
+            <div class="cta-row">
+              <button class="btn" type="submit">Submit Request</button>
+              <a class="btn whats" href="https://wa.me/2348034549951" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              <a class="btn call" href="tel:+2348034549951">Call Us</a>
+            </div>
+            <p id="formNote" class="muted" role="status" style="margin-top:.6rem"></p>
+          </form>
+        </div>
+        <div class="grid" style="gap:1rem">
+          <div class="card">
+            <h3 style="margin:.2rem 0">Office</h3>
+            <p class="muted">No. 1 Example Street, Ado‑Ekiti, Ekiti State, Nigeria</p>
+            <iframe title="Map" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.340737611505!2d3.379205!3d6.603055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b1b2b4e6b0b%3A0x8bdf1b3b8f9!2sNigeria!5e0!3m2!1sen!2sng!4v1610000000000"></iframe>
+          </div>
+          <div class="card">
+            <h3 style="margin:.2rem 0">Certifications</h3>
+            <p class="muted">• ISO 9001 (Quality Management) • HSE Level 3 • COREN Engineers</p>
+            <span class="chip">Tax ID Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer>
+    <div class="container foot-grid">
+      <div>
+        <div class="logo"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="28" width="15" height="17" rx="3" fill="#ffd271"/><rect x="19" y="20" width="12" height="25" rx="3" fill="#f29f05"/><rect x="33" y="10" width="12" height="35" rx="3" fill="#ffcc6a"/></svg><span>BuildRight</span></div>
+        <p class="muted">We build safe, durable, and beautiful spaces. Let’s bring your vision to life.</p>
+        <div class="cta-row"><a class="btn" href="#contact">Get a Quote</a></div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About Us</a><br>
+        <a href="services.html">Services</a><br>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:samtemsolutions@gmail.com">samtemsolutions@gmail.com</a><br>
+        <a href="tel:+2348034549951">+234 803 454 9951</a>
+        <p class="copyright">© <span id="yr"></span> BuildRight Construction. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
